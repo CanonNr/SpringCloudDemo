@@ -11,7 +11,10 @@
 
     <modules>
         <module>user-9001</module>
+        <module>user-9002</module>
         <module>commons</module>
+        <module>eureka-7001</module>
+        <module>eureka-7002</module>
     </modules>
 
     <properties>
@@ -41,6 +44,20 @@
                 <artifactId>commons</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>2.2.5.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>2.2.5.RELEASE</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
