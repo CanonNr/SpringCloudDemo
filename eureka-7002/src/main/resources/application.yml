@@ -1,14 +1,11 @@
 server:
   port: 7002
-
 eureka:
   instance:
-    hostname: localhost
-    appname: localhost-eureka-7002
+    hostname: euk2.local
+    appname: EurekaServer
   client:
-    # 不向注册中心注册自己
-    register-with-eureka: false
-    # 是否同步信息 , 单节点无需同步 ,  集群必须为true
+    register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka
+      defaultZone: http://euk1.local:7002/eureka/
