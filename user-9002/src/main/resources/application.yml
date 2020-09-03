@@ -6,9 +6,5 @@ eureka:
     hostname: localhost
     appname: localhost-user
   client:
-    # 不向注册中心注册自己
-    register-with-eureka: true
-    # 是否同步信息 , 单节点无需同步
-    fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka,http://127.0.0.1:7002/eureka
+      defaultZone: http://euk1.local:7001/eureka
