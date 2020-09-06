@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserMain9001 {
+public class OrderMain9021 {
     public static void main(String[] args) {
-        SpringApplication.run(UserMain9001.class, args);
+        SpringApplication.run(OrderMain9021.class,args);
     }
 }

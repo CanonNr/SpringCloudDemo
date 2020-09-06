@@ -15,6 +15,7 @@
         <module>commons</module>
         <module>eureka-7001</module>
         <module>eureka-7002</module>
+        <module>order-9021</module>
     </modules>
 
     <properties>
@@ -30,7 +31,12 @@
 
 
     <dependencyManagement>
+
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
