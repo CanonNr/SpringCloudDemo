@@ -1,17 +1,27 @@
 package com.lksun.springcloud.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.lksun.springcloud.remoteservice.UserClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.function.BiFunction;
 
 @RestController
 @RequestMapping("/test")
 public class TestController {
 
-    @RequestMapping(value = "",method = RequestMethod.GET)
+    @Autowired
+    UserClient client;
+
+    @RequestMapping(value = "1",method = RequestMethod.GET)
     public String test1(){
-        return "OK";
+        return client.get("1");
+    }
+
+    @RequestMapping(value = "2",method = RequestMethod.GET)
+    public String test2(){
+        return client.get("1");
     }
 }

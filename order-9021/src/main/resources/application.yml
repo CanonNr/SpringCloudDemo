@@ -1,2 +1,8 @@
 server:
   port: 9021
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk1.local:7001/eureka/

@@ -4,7 +4,11 @@ server:
 eureka:
   instance:
     hostname: localhost
-    appname: localhost-user
+    appname: user
   client:
+    fetch-registry: true
     service-url:
       defaultZone: http://euk1.local:7001/eureka
+spring:
+  application:
+    name: user

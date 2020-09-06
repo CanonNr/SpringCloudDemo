@@ -1,3 +1,4 @@
+
 server:
   port: 7002
 eureka:
@@ -8,4 +9,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://euk1.local:7002/eureka/
+      defaultZone: http://euk2.local:7002/eureka/,http://euk1.local:7001/eureka/
