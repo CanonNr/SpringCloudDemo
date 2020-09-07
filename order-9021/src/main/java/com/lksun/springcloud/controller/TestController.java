@@ -21,8 +21,6 @@ public class TestController {
 
     @RequestMapping(value = "fg",method = RequestMethod.GET)
     public String test1(@RequestParam(value = "id",defaultValue = "1") Integer id){
-        System.out.println("Feign");
-        System.out.println(id);
         return client.get(id);
     }
 
@@ -32,4 +30,6 @@ public class TestController {
         String url = "http://user/user?id="+id;
         return restTemplate.getForObject(url, String.class);
     }
+
+
 }

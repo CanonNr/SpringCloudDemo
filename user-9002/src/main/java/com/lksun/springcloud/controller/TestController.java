@@ -13,7 +13,8 @@ public class TestController {
     public String port;
 
     @RequestMapping("/user")
-    public CommonResult get(Integer id){
+    public CommonResult get(Integer id) throws InterruptedException {
+        Thread.sleep(3000);
         GetUser user = new GetUser();
         return new CommonResult(200,this.port,user.getUserById(id));
     }
