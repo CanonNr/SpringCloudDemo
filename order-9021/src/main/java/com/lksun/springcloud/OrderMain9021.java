@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableEurekaClient
 @EnableFeignClients
 public class OrderMain9021 {
     public static void main(String[] args) {
