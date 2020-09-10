@@ -1,0 +1,41 @@
+server:
+  port: 7001
+spring:
+  profiles: node1
+eureka:
+  instance:
+    hostname: euk1.local
+    appname: EurekaServer
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk2.local:7002/eureka/,http://euk1.local:7001/eureka/,http://euk3.local:7003/eureka/
+---
+server:
+  port: 7002
+spring:
+  profiles: node2
+eureka:
+  instance:
+    hostname: euk2.local
+    appname: EurekaServer
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk2.local:7002/eureka/,http://euk1.local:7001/eureka/,http://euk3.local:7003/eureka/
+---
+server:
+  port: 7003
+spring:
+  profiles: node3
+eureka:
+  instance:
+    hostname: euk3.local
+    appname: EurekaServer
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk2.local:7002/eureka/,http://euk1.local:7001/eureka/,http://euk3.local:7003/eureka/

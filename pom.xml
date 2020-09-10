@@ -10,12 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>user-9001</module>
-        <module>user-9002</module>
-        <module>commons</module>
-        <module>eureka-7001</module>
-        <module>eureka-7002</module>
-        <module>order-9021</module>
+        <module>cloud-eureka</module>
+        <module>common-util</module>
+        <module>service-order</module>
+        <module>service-user</module>
     </modules>
 
     <properties>
@@ -47,8 +45,9 @@
 
             <dependency>
                 <groupId>com.lksun</groupId>
-                <artifactId>commons</artifactId>
+                <artifactId>common-util</artifactId>
                 <version>1.0-SNAPSHOT</version>
+                <scope>compile</scope>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->

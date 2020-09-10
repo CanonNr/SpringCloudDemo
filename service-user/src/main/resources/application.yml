@@ -1,0 +1,45 @@
+server:
+  port: 9001
+eureka:
+  instance:
+    hostname: localhost
+    appname: user
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk1.local:7001/eureka
+spring:
+  profiles: node1
+  application:
+    name: user
+
+---
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: localhost
+    appname: user
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk1.local:7001/eureka
+spring:
+  application:
+    name: user
+  profiles: node2
+---
+server:
+  port: 9003
+eureka:
+  instance:
+    hostname: localhost
+    appname: user
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://euk1.local:7001/eureka
+spring:
+  application:
+    name: user
+  profiles: node3
