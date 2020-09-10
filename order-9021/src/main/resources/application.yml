@@ -7,5 +7,12 @@ eureka:
     service-url:
       defaultZone: http://euk1.local:7001/eureka/
 feign:
+  client:
+    config:
+      default:
+        #简历连接所用的时间，适用于网络状况正常的情况下，两端连接所需要的时间
+        connectTimeout: 5000
+        #指建立连接后从服务端读取到可用资源所用的时间
+        readTimeout: 10000
   hystrix:
     enabled: true
