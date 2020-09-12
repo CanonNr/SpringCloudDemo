@@ -3,6 +3,10 @@ spring:
     name: user
   zipkin:
     base-url: http://localhost:9411/
+  boot:
+    admin:
+      client:
+        url: http://localhost:7020
 eureka:
   instance:
     hostname: localhost
@@ -11,6 +15,15 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://euk1.local:7001/eureka,http://euk1.local:7002/eureka,http://euk1.local:7003/eureka
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 ---
 server:
   port: 9001

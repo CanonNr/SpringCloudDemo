@@ -3,6 +3,10 @@ spring:
     name: order
   zipkin:
     base-url: http://localhost:9411/
+  boot:
+    admin:
+      client:
+        url: http://localhost:7020
 eureka:
   client:
     register-with-eureka: true
@@ -19,6 +23,15 @@ feign:
         readTimeout: 10000
   hystrix:
     enabled: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 ---
 server:
   port: 9010
