@@ -6,7 +6,7 @@ spring:
     name: order
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://euk1.local:7001/eureka/,http://euk2.local:7002/eureka/,http://euk3.local:7003/eureka/
