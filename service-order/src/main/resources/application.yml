@@ -1,9 +1,8 @@
-server:
-  port: 9010
 spring:
-  profiles: node1
   application:
     name: order
+  zipkin:
+    base-url: http://localhost:9411/
 eureka:
   client:
     register-with-eureka: true
@@ -22,24 +21,11 @@ feign:
     enabled: true
 ---
 server:
+  port: 9010
+spring:
+  profiles: node1
+---
+server:
   port: 9011
 spring:
   profiles: node2
-  application:
-    name: order
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://euk1.local:7001/eureka/,http://euk2.local:7002/eureka/,http://euk3.local:7003/eureka/
-feign:
-  client:
-    config:
-      default:
-        #简历连接所用的时间，适用于网络状况正常的情况下，两端连接所需要的时间
-        connectTimeout: 5000
-        #指建立连接后从服务端读取到可用资源所用的时间
-        readTimeout: 10000
-  hystrix:
-    enabled: true
