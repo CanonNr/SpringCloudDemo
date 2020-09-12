@@ -16,6 +16,7 @@
         <module>service-user</module>
         <module>cloud-zuul</module>
         <module>cloud-admin</module>
+        <module>cloud-config</module>
     </modules>
 
     <properties>
