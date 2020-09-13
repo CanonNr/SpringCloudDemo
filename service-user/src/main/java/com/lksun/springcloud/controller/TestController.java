@@ -11,10 +11,17 @@ import com.lksun.springcloud.entities.CommonResult;
 public class TestController {
     @Value("${server.port}")
     public String port;
+    @Value("${data.title}")
+    public String title;
 
     @RequestMapping("/user")
     public CommonResult get(Integer id) throws InterruptedException {
         GetUser user = new GetUser();
         return new CommonResult(200,this.port,user.getUserById(id));
+    }
+
+    @RequestMapping("/title")
+    public CommonResult title(Integer id){
+        return new CommonResult(200,this.port,title);
     }
 }
